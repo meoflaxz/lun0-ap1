@@ -24,7 +24,7 @@ type BalanceData struct {
 func main() {
 	// Initialize the Luno client
 	lunoClient := luno.NewClient()
-	lunoClient.SetAuth("<YOUR_API_KEY>", "YOUR_API_SECRET")
+	lunoClient.SetAuth(os.Getenv("LUNO_API_KEY"), os.Getenv("LUNO_API_SECRET"))
 
 	// Create context with timeout
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -75,7 +75,7 @@ func getLunoBalances(ctx context.Context, client *luno.Client) ([]BalanceData, e
 
 func saveToGoogleSheets(ctx context.Context, balances []BalanceData) error {
 	// Read credentials file
-	credBytes, err := os.ReadFile("<your-credentials.json>")
+	credBytes, err := os.ReadFile(os.Getenv("JSON_CREDENTIALS"))
 	if err != nil {
 		return fmt.Errorf("failed to read credentials file: %v", err)
 	}
@@ -95,7 +95,7 @@ func saveToGoogleSheets(ctx context.Context, balances []BalanceData) error {
 		return fmt.Errorf("failed to create sheets service: %v", err)
 	}
 
-	spreadsheetId := "<YOUR_SPREADSHEET_ID>"
+	spreadsheetId := os.Getenv("SPREADSHEET_ID")
 	range_ := "<spreadsheetName!A:E>"
 
 	// First, get existing values to check if headers exist
