@@ -8,7 +8,7 @@ Before running this application, you need to have:
 
 1. Go installed on your system
 2. A Luno account with API credentials. [Setup here](https://www.luno.com/wallet/security/api_keys)
-3. A Google Cloud Project with the Google Sheets API enabled
+3. A Google Cloud Project with the Google Sheets API enabled. [Setup here](https://cloud.google.com/iam/docs/service-accounts-create)
 4. A service account with appropriate permissions for Google Sheets
 
 ## Dependencies Installation
