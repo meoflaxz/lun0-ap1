@@ -7,7 +7,7 @@ This Go application automatically fetches balance information from your Luno acc
 Before running this application, you need to have:
 
 1. Go installed on your system
-2. A Luno account with API credentials 
+2. A Luno account with API credentials. [Setup here](https://www.luno.com/wallet/security/api_keys)
 3. A Google Cloud Project with the Google Sheets API enabled
 4. A service account with appropriate permissions for Google Sheets
 
