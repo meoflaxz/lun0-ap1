@@ -60,14 +60,6 @@ The application writes the following columns to Google Sheets:
 - Balance
 - Reserved
 
-## Error Handling
-
-The application handles:
-- API connection issues
-- Authentication failures
-- Google Sheets access problems
-- Data formatting issues
-
 ## Security Notes
 
 - Never commit API credentials to version control
@@ -75,18 +67,12 @@ The application handles:
 - Use environment variables for sensitive data
 - Restrict Google Sheet access appropriately
 
-## Troubleshooting
+## Future Improvement
 
-1. **Google Sheets Access Error**
-   - Verify service account permissions
-   - Check if the sheet is shared with service account
-   - Confirm spreadsheet ID is correct
+- CRON job and automation
+- ??
 
-2. **Luno API Connection Failed**
-   - Verify API credentials
-   - Check internet connectivity
-   - Confirm API endpoints are accessible
+## Resources
 
-## Disclaimer
-
-This tool is not officially associated with Luno or Google. Use at your own risk and verify all data independently.
+- [Luno Go API (Github)](https://github.com/luno/luno-go)
+- [Luno API website](https://www.luno.com/en/developers/api)
