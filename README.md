@@ -36,9 +36,9 @@ go get google.golang.org/api/sheets/v4
 ## Configuration Steps
 
 1. Replace placeholders in the code:
-   - `YOUR_API_KEY` and `YOUR_API_SECRET` with your Luno API credentials
-   - `your-credentials.json` with your Google Sheets credentials filename
-   - `YOUR_SPREADSHEET_ID` with your Google Sheet ID
+   - `LUNO_API_KEY` and `LUNO_API_SECRET` with your Luno API credentials
+   - `JSON_CREDENTIALS` with your JSON Google service account credentials
+   - `SPREADSHEET_ID` with your Google Sheet ID
    - `spreadsheetName!A:E` with your desired sheet name and range
 
 2. Ensure your Google Sheet:
